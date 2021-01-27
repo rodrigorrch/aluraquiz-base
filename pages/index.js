@@ -1,3 +1,6 @@
+import { useRouter } from 'next/router'
+import React, { useState } from 'react'
+
 import styled from 'styled-components'
 import db from '../db.json'
 import Footer from '../src/components/Footer'
@@ -18,6 +21,9 @@ export const QuizContainer = styled.div`
 `
 
 export default function Home() {
+  const router = useRouter()
+  const [name, setName] = useState('')
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
@@ -28,6 +34,23 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
+
+            <form onSubmit={(infosDoEvento) => {
+              infosDoEvento.preventDefault()
+              router.push(`/quiz?name=${name}`)
+              console.log('Fazendo uma submissão por meio do react')
+            }}
+            >
+              <input
+                onChange={(infosDoEvento) => {
+                  setName(infosDoEvento.target.value)
+                }}
+                placeholder="Diz ai seu nome"
+              />
+              <button type="submit" disabled={name.length === 0}>
+                {`Jogar ${name}`}
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
 
@@ -40,7 +63,7 @@ export default function Home() {
         </Widget>
         <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/omariosouto" />
+      <GitHubCorner projectUrl="https://github.com/rodrigorrch" />
     </QuizBackground>
   );
 }
