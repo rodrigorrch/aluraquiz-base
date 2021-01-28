@@ -1,5 +1,5 @@
 {
-  "bg": "http://getwallpapers.com/wallpaper/full/e/6/7/402797.jpg?resize=1536%2C1208&ssl=1",
+  "bg": "https://i.ibb.co/JvSRZYd/402797.jpg",
   "title": "Quiz Digimon da Alura",
   "description": "Teste os seus conhecimentos sobre Digimon e vamos ver quantos monstinhos você conhece",
   "questions": [
@@ -32,7 +32,7 @@
   "theme": {
     "colors": {
       "primary": "#aa2e25",
-      "secondary": "#ff5722",
+      "secondary": "#ff9100",
       "mainBg": "#333333",
       "contrastText": "#FFFFFF",
       "wrong": "#FF5722",
