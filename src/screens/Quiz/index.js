@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { useRouter } from 'next/router';
+import { Lottie } from '@crello/react-lottie';
 // import db from '../../../db.json';
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
@@ -9,6 +11,8 @@ import AlternativesForm from '../../components/AlternativesForm';
 import Button from '../../components/Button';
 import BackLinkArrow from '../../components/BackLinkArrow';
 
+import loadingAnimation from './animations/loading.json';
+
 const screenStates = {
   QUIZ: 'QUIZ',
   LOADING: 'LOADING',
@@ -16,10 +20,13 @@ const screenStates = {
 };
 
 function ResultWidget({ results }) {
+  const router = useRouter();
+  const { name } = router.query;
+
   return (
     <Widget>
       <Widget.Header>
-        Tela de Resultado:
+        {`Seus resultados: ${name}`}
       </Widget.Header>
 
       <Widget.Content>
@@ -39,7 +46,7 @@ function ResultWidget({ results }) {
         </p>
         <ul>
           {results.map((result, index) => (
-            <li key={`result__${result}`}>
+            <li key={`result__${result}_${index + 1}`}>
               #
               {index + 1}
               {' '}
@@ -59,11 +66,16 @@ function LoadingWidget() {
   return (
     <Widget>
       <Widget.Header>
-        Carregando...
+        Prepare-se!!!
       </Widget.Header>
 
-      <Widget.Content>
-        [Desafio do Loading]
+      <Widget.Content style={{ display: 'flex', justifyContent: 'center' }}>
+        <Lottie
+          width="200px"
+          height="200px"
+          className="lottie-container basic"
+          config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
+        />
       </Widget.Content>
     </Widget>
   );
@@ -180,7 +192,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
     }, 1 * 1000);
-  // nasce === didMount
+    // nasce === didMount
   }, []);
 
   function handleSubmitQuiz() {
