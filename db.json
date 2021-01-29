@@ -1,40 +1,90 @@
 {
-  "bg": "https://i.ibb.co/JvSRZYd/402797.jpg",
-  "title": "Quiz Digimon da Alura",
-  "description": "Teste os seus conhecimentos sobre Digimon e vamos ver quantos monstinhos você conhece",
+  "bg": "https://wallpaperaccess.com/full/433527.jpg",
+  "title": "Quiz Universo",
+  "description": "Teste os seus conhecimentos sobre o Universo e vamos ver o quanto você conhece",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
+      "image": "https://media.giphy.com/media/l3q2Xl2Rd8wZfMCaI/giphy-downsized.gif",
+      "title": "Quais são os três tipos de galáxias ?",
       "description": "Essa é pra aquecer",
-      "answer": 2,
+      "answer": 1,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Espiral, Irregular e Encaixotada",
+        "Elíptica, Espiral e Irregular",
+        "Esferica, Espiral e Elíptica",
+        "Encaixotada, Elíptica e Irregular"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "image": "https://media.giphy.com/media/107KlThVAe0M0w/giphy-downsized.gif",
+      "title": "Qual é o planeta mais próximo do sol ?",
+      "description": "Lembrar de passar um protetor solar",
+      "answer": 2,
+      "alternatives": [
+        "Marte",
+        "Venus",
+        "Mercúrio",
+        "Terra"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/tGUJr7N765suQ/giphy-downsized.gif",
+      "title": "Qual é o planeta mais quente do sistema solar ?",
+      "description": "Bem quente hem",
       "answer": 0,
       "alternatives": [
-        "background: linear-gradient(#e66465, #9198e5);",
-        "background: gradient(#e66465, #9198e5);"
+        "Venus",
+        "Rio de Janeiro (brinks)",
+        "Mercúrio",
+        "Jupter"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/FMeMqqNECWhos/giphy-downsized.gif",
+      "title": "Qual é a segunda estrela mais próxima da terra ?",
+      "description": "Sera que é longe isso ?!",
+      "answer": 1,
+      "alternatives": [
+        "Sol",
+        "Proxima Centauri",
+        "Uy Scuti",
+        "Estrela de Barnard"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/3og0IFrHkIglEOg8Ba/giphy-downsized.gif",
+      "title": "Qual é a galaxia mais próxima da via láctea ?",
+      "description": "Shun de ...... (Entendedores Entenderão)",
+      "answer": 0,
+      "alternatives": [
+        "Andrômeda",
+        "Cata Vento",
+        "Cartwheel"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/YmiVOwLxy16Ss/giphy.gif",
+      "title": "Que cor é do nascer e por do sol em marte ?",
+      "description": "Oo",
+      "answer": 3,
+      "alternatives": [
+        "Verde",
+        "Igual ao da terra",
+        "Amarelo",
+        "Azul"
       ]
     }
   ],
+
   "external": [
     "https://aluraquiz-css.omariosouto.vercel.app/",
     "https://aluraquiz-devsoutinho.omariosouto.vercel.app/"
   ],
   "theme": {
     "colors": {
-      "primary": "#aa2e25",
-      "secondary": "#ff9100",
-      "mainBg": "#333333",
+      "primary": "#673ab7",
+      "secondary": "#33bfff",
+      "mainBg": "#263238",
       "contrastText": "#FFFFFF",
       "wrong": "#FF5722",
       "success": "#4CAF50"

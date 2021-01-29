@@ -2,7 +2,8 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Lottie } from '@crello/react-lottie';
-// import db from '../../../db.json';
+import { CheckCircle, Error } from '@styled-icons/material';
+
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
 import QuizBackground from '../../components/QuizBackground';
@@ -10,7 +11,6 @@ import QuizContainer from '../../components/QuizContainer';
 import AlternativesForm from '../../components/AlternativesForm';
 import Button from '../../components/Button';
 import BackLinkArrow from '../../components/BackLinkArrow';
-
 import loadingAnimation from './animations/loading.json';
 
 const screenStates = {
@@ -26,6 +26,7 @@ function ResultWidget({ results }) {
   return (
     <Widget>
       <Widget.Header>
+        <BackLinkArrow href="/" />
         {`Seus resultados: ${name}`}
       </Widget.Header>
 
@@ -44,16 +45,24 @@ function ResultWidget({ results }) {
           {' '}
           perguntas
         </p>
+        <p>
+          Você errou
+          {' '}
+          {results.filter((x) => !x).length}
+          {' '}
+          perguntas
+        </p>
         <ul>
           {results.map((result, index) => (
             <li key={`result__${result}_${index + 1}`}>
-              #
-              {index + 1}
+              {`0${index + 1}º`}
               {' '}
               Resultado:
+              {' '}
               {result === true
-                ? 'Acertou'
-                : 'Errou'}
+                ? <CheckCircle size="20" color="green" title="Acertou" />
+                : <Error size="20" color="red" title="Errou" />}
+              {' '}
             </li>
           ))}
         </ul>

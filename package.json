@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
+    "@styled-icons/material": "^10.26.0",
     "framer-motion": "^3.2.2-rc.1",
     "next": "latest",
     "prop-types": "^15.7.2",
