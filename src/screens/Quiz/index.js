@@ -4,7 +4,9 @@ import { useRouter } from 'next/router';
 import { Lottie } from '@crello/react-lottie';
 import { CheckCircle, Error } from '@styled-icons/material';
 
-import Alert from '@material-ui/lab/Alert';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
 import QuizBackground from '../../components/QuizBackground';
@@ -19,6 +21,10 @@ const screenStates = {
   LOADING: 'LOADING',
   RESULT: 'RESULT',
 };
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
 function ResultWidget({ results }) {
   const router = useRouter();
@@ -143,6 +149,7 @@ function QuestionWidget({
             const alternativeId = `alternative__${alternativeIndex}`;
             const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
             const isSelected = selectedAlternative === alternativeIndex;
+
             return (
               <Widget.Topic
                 as="label"
@@ -169,10 +176,12 @@ function QuestionWidget({
           <Button type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </Button>
-          <p>
-            {isQuestionSubmited && isCorrect && <Alert variant="filled" severity="success">Você Acertou !!!</Alert>}
-            {isQuestionSubmited && !isCorrect && <Alert variant="filled" severity="error">Você Errou !!!</Alert>}
-          </p>
+          <Snackbar open={isQuestionSubmited && isCorrect} autoHideDuration={6000}>
+            <Alert severity="success" message="Você Acertou !!!">Você Acertou !!!</Alert>
+          </Snackbar>
+          <Snackbar open={isQuestionSubmited && !isCorrect} autoHideDuration={6000}>
+            <Alert severity="error" message="Você Errou !!!">Você Errou !!!</Alert>
+          </Snackbar>
         </AlternativesForm>
       </Widget.Content>
     </Widget>
