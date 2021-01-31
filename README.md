@@ -1,7 +1,7 @@
 <h1 align="center">Alura Quiz</h1>
 
 <h2 align="center">😎 Teste os seus conhecimentos sobre o universo !</h2>
-<img src="https://i.ibb.co/Gn3cqq7/teste-alura.png" />
+<img align="center" src="https://i.ibb.co/Gn3cqq7/teste-alura.png" />
 
 <h4 align="center"> 
 	🚧 👷  Em construção...  🚧
