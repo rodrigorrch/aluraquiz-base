@@ -1,8 +1,7 @@
 <h1 align="center">Alura Quiz</h1>
 
-<h2 align="center">😎 Teste os seus conhecimentos !</h2>
-<!-- <h2 align="center">😎 Teste os seus conhecimentos sobre React e vamos ver quantas aplicações você vai deixar de quebrar!</h2> -->
-<!-- <img src="https://user-images.githubusercontent.com/49095200/105904229-a2f20000-5fff-11eb-9bdb-8cf28bd3432e.png" /> -->
+<h2 align="center">😎 Teste os seus conhecimentos sobre o universo !</h2>
+<img src="https://i.ibb.co/Gn3cqq7/teste-alura.png" />
 
 <h4 align="center"> 
 	🚧 👷  Em construção...  🚧
