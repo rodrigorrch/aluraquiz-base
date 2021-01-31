@@ -10,6 +10,7 @@ import MuiAlert from '@material-ui/lab/Alert';
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
 import QuizBackground from '../../components/QuizBackground';
+import GitHubCorner from '../../components/GitHubCorner';
 import QuizContainer from '../../components/QuizContainer';
 import AlternativesForm from '../../components/AlternativesForm';
 import Button from '../../components/Button';
@@ -23,7 +24,8 @@ const screenStates = {
 };
 
 function Alert(props) {
-  return <MuiAlert elevation={6} variant="filled" {...props} />;
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  return <MuiAlert elevation={10} variant="filled" {...props} />;
 }
 
 function ResultWidget({ results }) {
@@ -246,6 +248,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
         {screenState === screenStates.RESULT && <ResultWidget results={results} />}
       </QuizContainer>
+      <GitHubCorner projectUrl="https://github.com/rodrigorrch" />
     </QuizBackground>
   );
 }
