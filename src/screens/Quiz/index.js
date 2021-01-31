@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { Lottie } from '@crello/react-lottie';
 import { CheckCircle, Error } from '@styled-icons/material';
 
+import Alert from '@material-ui/lab/Alert';
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
 import QuizBackground from '../../components/QuizBackground';
@@ -168,8 +169,10 @@ function QuestionWidget({
           <Button type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </Button>
-          {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
+          <p>
+            {isQuestionSubmited && isCorrect && <Alert variant="filled" severity="success">Você Acertou !!!</Alert>}
+            {isQuestionSubmited && !isCorrect && <Alert variant="filled" severity="error">Você Errou !!!</Alert>}
+          </p>
         </AlternativesForm>
       </Widget.Content>
     </Widget>
