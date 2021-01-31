@@ -1,4 +1,4 @@
-<h1 align="center">Alura Quiz</h1>
+<h1 align="center">Quiz sobre o universo</h1>
 
 <h2 align="center">😎 Teste os seus conhecimentos sobre o universo !</h2>
 <p align="center">
