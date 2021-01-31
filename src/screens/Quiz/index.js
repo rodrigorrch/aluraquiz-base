@@ -75,7 +75,7 @@ function LoadingWidget() {
   return (
     <Widget>
       <Widget.Header>
-        Prepare-se!!!
+        Aperte o cinto !!!
       </Widget.Header>
 
       <Widget.Content style={{ display: 'flex', justifyContent: 'center' }}>
@@ -83,6 +83,7 @@ function LoadingWidget() {
           width="200px"
           height="200px"
           className="lottie-container basic"
+          speed="2"
           config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
         />
       </Widget.Content>
@@ -200,7 +201,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
     // fetch() ...
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1 * 1000);
+    }, 2.5 * 1000);
     // nasce === didMount
   }, []);
 

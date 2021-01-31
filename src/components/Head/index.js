@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 
 export default function Home({ title, description, bg }) {
   return (
@@ -25,3 +26,9 @@ export default function Home({ title, description, bg }) {
     </Head>
   );
 }
+
+Home.propTypes = {
+  title: PropTypes.node.isRequired,
+  description: PropTypes.node.isRequired,
+  bg: PropTypes.node.isRequired,
+};
